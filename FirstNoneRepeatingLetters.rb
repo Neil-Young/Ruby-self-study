@@ -1,4 +1,5 @@
 =begin
+# My solution will cause CPU time exceeded on codewars server...sigh...
 def  first_non_repeating_letter(s)
   non_repeating_flag = 0
   return "nil" if s.length == 0 || s == nil
@@ -13,11 +14,14 @@ def  first_non_repeating_letter(s)
 end
 =end
 
+
+#best solution from a guy on codewars
 def  first_non_repeating_letter(s)
   s.each_char do |ch|
     puts ch if s.downcase.count(ch.downcase) < 2
   end
   puts "nil"
 end
+
 
 first_non_repeating_letter('a,aaADDBaaab')
